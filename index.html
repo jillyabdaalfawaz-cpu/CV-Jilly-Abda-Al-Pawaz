@@ -4,23 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Vitae - Jilly Abda Al Pawaz</title>
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/icon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background: #0d0f12; color: #ffffff; }
-        header { position: relative; width: 100%; min-height: 100vh; background: #0d0f12; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        body { background: #0d0f12; color: #ffffff; overflow-x: hidden; }
+        
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        .navbar { padding: 20px 0; border-bottom: 1px solid rgba(0, 161, 156, 0.2); }
+        section { padding: 100px 0; min-height: 80vh; border-bottom: 1px solid rgba(0, 161, 156, 0.1); }
+        h2.section-title { font-family: 'Orbitron', sans-serif; font-size: 36px; color: #00A19C; text-align: center; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* Navbar */
+        .navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: rgba(13, 15, 18, 0.95); backdrop-filter: blur(10px); padding: 15px 0; border-bottom: 1px solid rgba(0, 161, 156, 0.2); }
         .navbar-box { display: flex; justify-content: flex-end; align-items: center; }
         .menu { display: flex; list-style: none; gap: 30px; }
         .menu li a { color: #ffffff; text-decoration: none; font-weight: 600; font-size: 14px; transition: 0.3s; }
         .menu li a:hover { color: #00A19C; }
-        .hero { position: relative; overflow: hidden; padding: 80px 20px; display: flex; justify-content: center; align-items: center; min-height: calc(100vh - 80px); }
-        .hero-box { display: flex; align-items: center; justify-content: center; gap: 50px; flex-wrap: wrap; max-width: 900px; width: 100%; }
-        .avatar-wrapper { position: relative; width: 220px; height: 220px; flex-shrink: 0; }
+
+        /* Hero Header */
+        header { position: relative; width: 100%; min-height: 100vh; background: #0d0f12; display: flex; align-items: center; justify-content: center; padding-top: 80px; }
+        .hero { width: 100%; display: flex; justify-content: center; align-items: center; padding: 40px 0; }
+        .hero-box { display: flex; align-items: center; justify-content: center; gap: 50px; flex-wrap: wrap; max-width: 900px; width: 100%; position: relative; }
+        
+        /* Wadah Foto & Tali */
+        .profile-visuals-wrapper { position: relative; width: 220px; height: 220px; flex-shrink: 0; margin-top: 40px; }
+        .rope-container { position: absolute; top: -120px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; cursor: grab; z-index: 100; user-select: none; width: 40px; height: 150px; }
+        .rope-container:active { cursor: grabbing; }
+        .rope-line { width: 3px; height: 110px; background: linear-gradient(to bottom, transparent, #00A19C); box-shadow: 0 0 10px rgba(0, 161, 156, 0.8); }
+        .rope-handle { width: 38px; height: 38px; background: #181b20; border: 2px solid #00A19C; border-radius: 50%; color: #00A19C; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 15px rgba(0, 161, 156, 0.6); font-size: 14px; margin-top: -2px; }
+        
+        .avatar-wrapper { position: relative; width: 100%; height: 100%; }
         .avatar-wrapper img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 3px solid #00A19C; box-shadow: 0 0 25px rgba(0, 161, 156, 0.5); }
         .f1-badge { position: absolute; bottom: 5px; right: 5px; background: #00A19C; color: #000; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; box-shadow: 0 0 10px rgba(0, 161, 156, 0.8); }
+        
         .hero-text-content { text-align: center; }
         .hero-icons { display: flex; gap: 12px; justify-content: center; margin-bottom: 15px; }
         .icon-badge { width: 38px; height: 38px; background: rgba(0, 161, 156, 0.1); border: 1px solid rgba(0, 161, 156, 0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #00A19C; font-size: 14px; }
@@ -29,39 +47,45 @@
         .hero-welcome-title span { color: #00A19C; text-shadow: 0 0 15px rgba(0, 161, 156, 0.6); }
         .hero-subtitle { color: #ffffff; font-size: 18px; font-weight: 600; margin-bottom: 15px; }
         .hero-badge-link span { display: inline-block; padding: 6px 16px; background: rgba(27, 30, 36, 0.9); border: 1px solid rgba(0, 161, 156, 0.4); border-radius: 20px; color: #8b949e; font-size: 12px; font-family: monospace; }
-        .rope-container { position: absolute; top: 0; right: 10%; display: flex; flex-direction: column; align-items: center; cursor: grab; z-index: 100; user-select: none; }
-        .rope-container:active { cursor: grabbing; }
-        .rope-line { width: 3px; height: 130px; background: linear-gradient(to bottom, transparent, #00A19C); box-shadow: 0 0 10px rgba(0, 161, 156, 0.8); }
-        .rope-handle { width: 40px; height: 40px; background: #181b20; border: 2px solid #00A19C; border-radius: 50%; color: #00A19C; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 15px rgba(0, 161, 156, 0.6); font-size: 14px; }
-        .petronas-stripe { height: 4px; width: 100%; background: #00A19C; box-shadow: 0 0 12px rgba(0, 161, 156, 0.8); }
+        .petronas-stripe { height: 4px; width: 100%; background: #00A19C; box-shadow: 0 0 12px rgba(0, 161, 156, 0.8); position: absolute; bottom: 0; left: 0; }
+
+        /* Content Box Style */
+        .content-box { background: rgba(27, 30, 36, 0.5); border: 1px solid rgba(0, 161, 156, 0.2); border-radius: 12px; padding: 40px; box-shadow: 0 0 20px rgba(0, 161, 156, 0.05); }
     </style>
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="container">
-                <div class="navbar-box">
-                    <ul class="menu">
-                        <li><a href="#tentang">TENTANG</a></li>
-                        <li><a href="#pengalaman">PENGALAMAN</a></li>
-                        <li><a href="#proyek">PROYEK</a></li>
-                        <li><a href="#kontak">KONTAK</a></li>
-                    </ul>
-                </div>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="container">
+            <div class="navbar-box">
+                <ul class="menu">
+                    <li><a href="#header">BERANDA</a></li>
+                    <li><a href="#tentang">TENTANG</a></li>
+                    <li><a href="#pengalaman">PENGALAMAN</a></li>
+                    <li><a href="#proyek">PROYEK</a></li>
+                    <li><a href="#kontak">KONTAK</a></li>
+                </ul>
             </div>
         </div>
+    </div>
+
+    <!-- HEADER / HERO -->
+    <header id="header">
         <div class="hero">
-            <div class="rope-container" id="ropeContainer">
-                <div class="rope-line"></div>
-                <div class="rope-handle" id="ropeHandle" title="Tarik saya!">
-                    <i class="fa-solid fa-arrows-up-down"></i>
-                </div>
-            </div>
             <div class="container">
                 <div class="hero-box">
-                    <div class="avatar-wrapper">
-                        <img src="./assets/images/fotojilly.jpeg.jpeg" alt="Foto Profil" />
-                        <div class="f1-badge"><i class="fa-solid fa-flag-checkered"></i></div>
+                    <div class="profile-visuals-wrapper">
+                        <div class="rope-container" id="ropeContainer">
+                            <div class="rope-line"></div>
+                            <div class="rope-handle" id="ropeHandle" title="Tarik saya!">
+                                <i class="fa-solid fa-arrows-up-down"></i>
+                            </div>
+                        </div>
+                        <div class="avatar-wrapper">
+                            <img src="./assets/images/fotojilly.jpeg.jpeg" alt="Foto Profil" />
+                            <div class="f1-badge"><i class="fa-solid fa-flag-checkered"></i></div>
+                        </div>
                     </div>
                     <div class="hero-text-content">
                         <div class="hero-icons">
@@ -79,6 +103,48 @@
         </div>
         <div class="petronas-stripe"></div>
     </header>
+
+    <!-- SECTION TENTANG -->
+    <section id="tentang">
+        <div class="container">
+            <h2 class="section-title">Tentang Saya</h2>
+            <div class="content-box">
+                <p>Halo! Saya Jilly Abda Al Pawaz, seorang individu yang antusias dalam bidang analisis data, pengembangan web, serta eksplorasi teknologi kreatif.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION PENGALAMAN -->
+    <section id="pengalaman">
+        <div class="container">
+            <h2 class="section-title">Pengalaman</h2>
+            <div class="content-box">
+                <p>Berpengalaman dalam mengelola proyek digital, analisis data menggunakan berbagai tools, serta mendesain antarmuka web interaktif.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION PROYEK -->
+    <section id="proyek">
+        <div class="container">
+            <h2 class="section-title">Proyek</h2>
+            <div class="content-box">
+                <p>Kumpulan proyek portofolio interaktif berbasis HTML, CSS, dan JavaScript dengan tema F1/Petronas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION KONTAK -->
+    <section id="kontak">
+        <div class="container">
+            <h2 class="section-title">Kontak</h2>
+            <div class="content-box">
+                <p>Hubungi saya melalui GitHub atau email untuk kolaborasi proyek menarik lainnya.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCRIPT INTERAKSI TALI -->
     <script>
         const rope = document.getElementById('ropeContainer');
         let isDragging = false, startY = 0;
@@ -86,13 +152,13 @@
         window.addEventListener('mousemove', (e) => {
             if (!isDragging) return;
             const deltaY = e.clientY - startY;
-            if (deltaY > 0 && deltaY < 120) rope.style.transform = `translateY(${deltaY}px)`;
+            if (deltaY > 0 && deltaY < 120) rope.style.transform = `translateX(-50%) translateY(${deltaY}px)`;
         });
         window.addEventListener('mouseup', () => {
             if (isDragging) {
                 isDragging = false;
                 rope.style.transition = 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-                rope.style.transform = 'translateY(0px)';
+                rope.style.transform = 'translateX(-50%) translateY(0px)';
                 setTimeout(() => { rope.style.transition = 'transform 0.1s ease-out'; }, 400);
             }
         });
