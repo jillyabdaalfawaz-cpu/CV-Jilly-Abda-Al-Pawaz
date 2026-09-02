@@ -15,24 +15,32 @@
 
     <title>CV | Jilly Abda Al Pawaz</title>
 
-    <!-- Font Racing & Modern (Titillium Web & Orbitron & Poppins) -->
+    <!-- Font Racing & Modern -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Poppins:wght@300;400;600;700&family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <style>
-        /* CSS Tambahan untuk Fitur Tali Interaktif di Atas Foto */
+        .welcome-tag {
+            font-family: 'Orbitron', sans-serif;
+            color: #00A19C;
+            font-size: 14px;
+            letter-spacing: 3px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
         .profile-visuals-wrapper {
             position: relative;
             width: 220px;
             height: 220px;
-            flex-shrink: 0;
-            margin-top: 40px;
+            margin: 40px auto 0 auto;
         }
 
         .rope-container {
             position: absolute;
-            top: -120px;
+            top: -100px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -42,20 +50,20 @@
             z-index: 100;
             user-select: none;
             width: 40px;
-            height: 150px;
+            height: 120px;
         }
         .rope-container:active { cursor: grabbing; }
 
         .rope-line {
             width: 3px;
-            height: 110px;
+            height: 80px;
             background: linear-gradient(to bottom, transparent, #00A19C);
             box-shadow: 0 0 10px rgba(0, 161, 156, 0.8);
         }
 
         .rope-handle {
-            width: 38px;
-            height: 38px;
+            width: 36px;
+            height: 36px;
             background: #181b20;
             border: 2px solid #00A19C;
             border-radius: 50%;
@@ -64,7 +72,7 @@
             align-items: center;
             justify-content: center;
             box-shadow: 0 0 15px rgba(0, 161, 156, 0.6);
-            font-size: 14px;
+            font-size: 13px;
             margin-top: -2px;
         }
         .rope-handle:hover { background: #00A19C; color: #000; }
@@ -91,9 +99,18 @@
         <!-- Hero -->
         <div class="hero">
             <div class="container">
-                <div class="hero-box">
+                <div class="hero-box" style="text-align: center;">
                     
-                    <!-- Wadah Foto dengan Tali Interaktif Pas di Atasnya -->
+                    <!-- TEKS DIBERSIHKAN DAN DIGANTI KE CURRICULUM VITAE -->
+                    <div class="welcome-tag">WELCOME TO MY CURRICULUM VITAE WEBSITE</div>
+                    
+                    <div class="driver-tag">MEMBER / DATA ANALYST</div>
+                    <h1>
+                        HAI, SAYA <br><span id="element"></span>
+                    </h1>
+                    <p class="hero-subtitle">DATA ANALYTICS | EDUCATIONAL MANAGEMENT | RESEARCH</p>
+
+                    <!-- Wadah Foto dengan Tali Interaktif -->
                     <div class="profile-visuals-wrapper">
                         <div class="rope-container" id="ropeContainer" title="Tarik saya!">
                             <div class="rope-line"></div>
@@ -107,13 +124,6 @@
                         </div>
                     </div>
 
-                    <div>
-                        <div class="driver-tag">MEMBER / DATA ANALYST</div>
-                        <h1>
-                            HAI, SAYA <br><span id="element"></span>
-                        </h1>
-                        <p class="hero-subtitle">DATA ANALYTICS | EDUCATIONAL MANAGEMENT | RESEARCH</p>
-                    </div>
                 </div>
             </div>
         </div>
