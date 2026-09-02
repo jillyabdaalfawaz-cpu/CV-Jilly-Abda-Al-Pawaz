@@ -9,8 +9,231 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- CSS Utama (Mengarahkan ke folder dist/css/style.css) -->
-    <link rel="stylesheet" href="./dist/css/style.css?v=9999">
+    <!-- CSS Internal (Langsung Aktif Tanpa File Eksternal) -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0d0f12;
+            color: #ffffff;
+        }
+
+        header {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            background: #0d0f12;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0, 161, 156, 0.2);
+        }
+
+        .navbar-box {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .menu li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .menu li a:hover {
+            color: #00A19C;
+            text-shadow: 0 0 10px rgba(0, 161, 156, 0.8);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            padding: 80px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 80px);
+        }
+
+        .hero-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* Avatar & F1 Badge */
+        .avatar-wrapper {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            flex-shrink: 0;
+        }
+
+        .avatar-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #00A19C;
+            box-shadow: 0 0 25px rgba(0, 161, 156, 0.5);
+        }
+
+        .f1-badge {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background: #00A19C;
+            color: #000;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            box-shadow: 0 0 10px rgba(0, 161, 156, 0.8);
+        }
+
+        /* Hero Text Content */
+        .hero-text-content {
+            text-align: center;
+        }
+
+        .hero-icons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .icon-badge {
+            width: 38px;
+            height: 38px;
+            background: rgba(0, 161, 156, 0.1);
+            border: 1px solid rgba(0, 161, 156, 0.4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00A19C;
+            font-size: 14px;
+        }
+
+        .driver-tag {
+            color: #00A19C;
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .hero-welcome-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 900;
+            font-size: 38px;
+            line-height: 1.2;
+            color: #ffffff;
+            margin-bottom: 12px;
+        }
+
+        .hero-welcome-title span {
+            color: #00A19C;
+            text-shadow: 0 0 15px rgba(0, 161, 156, 0.6);
+        }
+
+        .hero-subtitle {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .hero-badge-link span {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(27, 30, 36, 0.9);
+            border: 1px solid rgba(0, 161, 156, 0.4);
+            border-radius: 20px;
+            color: #8b949e;
+            font-size: 12px;
+            font-family: monospace;
+        }
+
+        /* Gantungan Tali / Pull String Interaktif */
+        .rope-container {
+            position: absolute;
+            top: 0;
+            right: 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: grab;
+            z-index: 100;
+            user-select: none;
+        }
+
+        .rope-container:active {
+            cursor: grabbing;
+        }
+
+        .rope-line {
+            width: 3px;
+            height: 130px;
+            background: linear-gradient(to bottom, transparent, #00A19C);
+            box-shadow: 0 0 10px rgba(0, 161, 156, 0.8);
+        }
+
+        .rope-handle {
+            width: 40px;
+            height: 40px;
+            background: #181b20;
+            border: 2px solid #00A19C;
+            border-radius: 50%;
+            color: #00A19C;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px rgba(0, 161, 156, 0.6);
+            font-size: 14px;
+        }
+
+        /* Garis Aksen Petronas Teal */
+        .petronas-stripe {
+            height: 4px;
+            width: 100%;
+            background: #00A19C;
+            box-shadow: 0 0 12px rgba(0, 161, 156, 0.8);
+        }
+    </style>
 </head>
 <body>
 
@@ -90,7 +313,7 @@
         window.addEventListener('mousemove', (e) => {
             if (!isDragging) return;
             const deltaY = e.clientY - startY;
-            if (deltaY > 0 && deltaY < 100) {
+            if (deltaY > 0 && deltaY < 120) {
                 rope.style.transform = `translateY(${deltaY}px)`;
             }
         });
