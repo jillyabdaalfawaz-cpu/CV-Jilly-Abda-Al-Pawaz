@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Jilly Abda Al Pawaz</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- GLOBAL RESET --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        body { background: #0d0f12; color: #ffffff; overflow-x: hidden; }
+
+        /* --- UTILITIES --- */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 100px 0; min-height: 80vh; border-bottom: 1px solid rgba(0, 161, 156, 0.1); }
+        h2.section-title { font-family: 'Orbitron', sans-serif; font-size: 42px; color: #00A19C; text-align: center; margin-bottom: 60px; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* --- NAVBAR --- */
+        .navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; background: #0d0f12; padding: 15px 0; border-bottom: 1px solid rgba(0, 161, 156, 0.2); }
+        .navbar-box { display: flex; justify-content: flex-end; align-items: center; }
+        .menu { display: flex; list-style: none; gap: 30px; }
+        .menu li a { color: #ffffff; text-decoration: none; font-weight: 600; font-size: 14px; letter-spacing: 1px; transition: 0.3s; padding: 5px 0; }
+        .menu li a:hover { color: #00A19C; text-shadow: 0 0 10px rgba(0, 161, 156, 0.8); border-bottom: 2px solid #00A19C; }
+
+        /* --- HERO SECTION --- */
+        header { position: relative; width: 100%; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding-top: 80px; }
+        .hero-box { display: flex; align-items: center; justify-content: center; gap: 50px; flex-wrap: wrap; max-width: 900px; width: 100%; position: relative; }
+
+        /* --- WADAH BARU UNTUK FOTO DAN TALI --- */
+        .profile-visuals-wrapper { position: relative; width: 220px; height: 220px; flex-shrink: 0; }
+
+        /* --- Avatar Foto --- */
+        .avatar-wrapper { position: relative; width: 100%; height: 100%; }
+        .avatar-wrapper img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; border: 3px solid #00A19C; box-shadow: 0 0 25px rgba(0, 161, 156, 0.5); }
+        .f1-badge { position: absolute; bottom: 5px; right: 5px; background: #00A19C; color: #000; width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; box-shadow: 0 0 10px rgba(0, 161, 156, 0.8); z-index: 2; }
+
+        /* --- Rope Container (TALI) --- */
+        /* Diposisikan absolut DI ATAS foto menggunakan z-index tinggi */
+        .rope-container { position: absolute; top: -120px; /* Tali menjuntai dari atas foto */ left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; cursor: grab; z-index: 10; user-select: none; height: 150px; width: 40px; }
+        .rope-container:active { cursor: grabbing; }
+        .rope-line { width: 3px; height: 100%; background: linear-gradient(to bottom, transparent, #00A19C); box-shadow: 0 0 10px rgba(0, 161, 156, 0.8); }
+        .rope-handle { width: 40px; height: 40px; background: #181b20; border: 2px solid #00A19C; border-radius: 50%; color: #00A19C; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 15px rgba(0, 161, 156, 0.6); font-size: 14px; margin-top: -2px; transition: background 0.3s, color 0.3s; }
+        .rope-handle:hover { background: #00A19C; color: #000000; }
+
+        /* --- Hero Text --- */
+        .hero-text-content { text-align: center; }
+        .hero-icons { display: flex; gap: 12px; justify-content: center; margin-bottom: 15px; }
+        .icon-badge { width: 38px; height: 38px; background: rgba(0, 161, 156, 0.1); border: 1px solid rgba(0, 161, 156, 0.4); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #00A19C; font-size: 14px; }
+        .driver-tag { color: #00A19C; font-weight: 700; letter-spacing: 2px; font-size: 13px; margin-bottom: 8px; text-transform: uppercase; }
+        .hero-welcome-title { font-family: 'Orbitron', sans-serif; font-weight: 900; font-size: 38px; line-height: 1.2; color: #ffffff; margin-bottom: 12px; }
+        .hero-welcome-title span { color: #00A19C; text-shadow: 0 0 15px rgba(0, 161, 156, 0.6); }
+        .hero-subtitle { color: #ffffff; font-size: 18px; font-weight: 600; margin-bottom: 15px; }
+        .hero-badge-link span { display: inline-block; padding: 6px 16px; background: rgba(27, 30, 36, 0.9); border: 1px solid rgba(0, 161, 156, 0.4); border-radius: 20px; color: #8b949e; font-size: 12px; font-family: monospace; }
+
+        /* --- FOOTER STRIPE --- */
+        .petronas-stripe { height: 4px; width: 100%; background: #00A19C; box-shadow: 0 0 12px rgba(0, 161, 156, 0.8); position: absolute; bottom: 0; left: 0;}
+
+        /* --- SAMPLE SECTIONS --- */
+        .content-section { display: flex; align-items: center; justify-content: center; }
+        .section-content-box { text-align: center; max-width: 600px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-box">
+                <ul class="menu">
+                    <li><a href="#header">BERANDA</a></li>
+                    <li><a href="#tentang">TENTANG</a></li>
+                    <li><a href="#pengalaman">PENGALAMAN</a></li>
+                    <li><a href="#proyek">PROYEK</a></li>
+                    <li><a href="#kontak">KONTAK</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="header">
+        <div class="container">
+            <div class="hero-box">
+                <div class="profile-visuals-wrapper">
+                    <div class="rope-container" id="ropeContainer" title="Tarik saya!">
+                        <div class="rope-line"></div>
+                        <div class="rope-handle" id="ropeHandle">
+                            <i class="fa-solid fa-arrows-up-down"></i>
+                        </div>
+                    </div>
+                    <div class="avatar-wrapper">
+                        <img src="./assets/images/fotojilly.jpeg.jpeg" alt="Foto Profil Jilly Abda Al Pawaz" />
+                        <div class="f1-badge"><i class="fa-solid fa-flag-checkered"></i></div>
+                    </div>
+                </div>
+
+                <div class="hero-text-content">
+                    <div class="hero-icons">
+                        <span class="icon-badge"><i class="fa-solid fa-code"></i></span>
+                        <span class="icon-badge"><i class="fa-solid fa-user-astronaut"></i></span>
+                        <span class="icon-badge"><i class="fa-solid fa-terminal"></i></span>
+                    </div>
+                    <div class="driver-tag">MEMBER / DATA ANALYST</div>
+                    <h1 class="hero-welcome-title">
+                        Welcome to My<br><span>Curriculum Vitae</span>
+                    </h1>
+                    <p class="hero-subtitle">HAI, SAYA <span id="element">JILLY ABDA AL PAWAZ</span></p>
+                    <div class="hero-badge-link">
+                        <span>jillyabdaalfawaz-cpu.github.io</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="petronas-stripe"></div>
+    </header>
+
+    <section id="tentang">
+        <div class="container content-section">
+            <div class="section-content-box">
+                <h2 class="section-title">Tentang Saya</h2>
+                <p>Halo! Saya Jilly Abda Al Pawaz. Saya adalah seorang yang antusias di bidang teknologi, pemrograman web, dan analisis data. Portofolio ini adalah representasi dari proyek dan perjalanan belajar saya.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pengalaman">
+        <div class="container content-section">
+            <div class="section-content-box">
+                <h2 class="section-title">Pengalaman</h2>
+                <p>Saya telah mengerjakan berbagai proyek kecil dan menengah menggunakan HTML, CSS, JavaScript, dan Python. Saya juga aktif mempelajari alat analisis data untuk mengekstrak wawasan dari dataset.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyek">
+        <div class="container content-section">
+            <div class="section-content-box">
+                <h2 class="section-title">Proyek</h2>
+                <p>Beberapa proyek yang telah saya selesaikan termasuk pembuatan website statis dan dinamis, visualisasi data, serta analisis statistik sederhana. Kode sumber proyek-proyek ini tersedia di repositori GitHub saya.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak">
+        <div class="container content-section">
+            <div class="section-content-box">
+                <h2 class="section-title">Kontak</h2>
+                <p>Silakan hubungi saya melalui email atau profil media sosial saya untuk berkolaborasi atau mendiskusikan peluang kerja sama. Saya terbuka untuk belajar dan tumbuh dalam dunia teknologi dan data.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const rope = document.getElementById('ropeContainer');
+        const handle = document.getElementById('ropeHandle');
+        let isDragging = false;
+        let startY = 0;
+
+        // Mouse Down: Mulai menyeret
+        rope.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startY = e.clientY;
+        });
+
+        // Mouse Move: Gerakkan elemen tali
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const deltaY = e.clientY - startY;
+            if (deltaY > 0 && deltaY < 120) {
+                rope.style.transform = `translateX(-50%) translateY(${deltaY}px)`;
+            }
+        });
+
+        // Mouse Up: Lepas dan kembali ke posisi awal
+        window.addEventListener('mouseup', () => {
+            if (isDragging) {
+                isDragging = false;
+                rope.style.transition = 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                rope.style.transform = 'translateX(-50%) translateY(0px)';
+                // Reset transisi agar seretan cepat kembali terasa renyah
+                setTimeout(() => {
+                    rope.style.transition = 'transform 0.1s ease-out';
+                }, 400);
+            }
+        });
+    </script>
+</body>
+</html>
