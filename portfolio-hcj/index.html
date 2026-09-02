@@ -1,4 +1,20 @@
-<!-- Header & Hero Section -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Jilly Abda Al Pawaz</title>
+
+    <!-- FontAwesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Utama dengan Versioning Cache-Buster (?v=2.0) -->
+    <link rel="stylesheet" href="./dist/css/style.css?v=2.0">
+</head>
+<body>
+
+    <!-- Header & Hero Section -->
     <header>
         <!-- Navbar -->
         <div class="navbar">
@@ -14,9 +30,9 @@
             </div>
         </div>
 
-        <!-- Hero Section Baru dengan Gantungan Tali Interaktif -->
+        <!-- Hero Section Utama -->
         <div class="hero">
-            <!-- Gantungan Tali / Pull String -->
+            <!-- Gantungan Tali / Pull String Interaktif -->
             <div class="rope-container" id="ropeContainer">
                 <div class="rope-line"></div>
                 <div class="rope-handle" id="ropeHandle" title="Tarik saya!">
@@ -26,14 +42,14 @@
 
             <div class="container">
                 <div class="hero-box">
-                    <!-- Foto Profil dengan Gantungan & Badge F1 -->
+                    <!-- Foto Profil & Badge Petronas F1 -->
                     <div class="avatar-wrapper">
                         <img src="./assets/images/fotojilly.jpeg.jpeg" alt="Foto Profil Jilly Abda Al Pawaz" />
                         <div class="f1-badge"><i class="fa-solid fa-flag-checkered"></i></div>
                     </div>
 
-                    <!-- Teks Welcome & Informasi -->
-                    <div>
+                    <!-- Teks Informasi & Judul Welcome -->
+                    <div class="hero-text-content">
                         <div class="hero-icons">
                             <span class="icon-badge"><i class="fa-solid fa-code"></i></span>
                             <span class="icon-badge"><i class="fa-solid fa-user-astronaut"></i></span>
@@ -46,7 +62,7 @@
                             Welcome to My<br><span>Curriculum Vitae</span>
                         </h1>
 
-                        <p class="hero-subtitle">HAI, SAYA <span id="element"></span></p>
+                        <p class="hero-subtitle">HAI, SAYA <span id="element">JILLY ABDA AL PAWAZ</span></p>
 
                         <div class="hero-badge-link">
                             <span>jillyabdaalfawaz-cpu.github.io</span>
@@ -56,6 +72,40 @@
             </div>
         </div>
 
-        <!-- Petronas Teal Accent Bar Line -->
+        <!-- Garis Aksen Petronas Teal -->
         <div class="petronas-stripe"></div>
     </header>
+
+    <!-- Script Interaktif Tarik Tali (Pull String) -->
+    <script>
+        const rope = document.getElementById('ropeContainer');
+        let isDragging = false;
+        let startY = 0;
+
+        rope.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            startY = e.clientY;
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            const deltaY = e.clientY - startY;
+            if (deltaY > 0 && deltaY < 100) {
+                rope.style.transform = `translateY(${deltaY}px)`;
+            }
+        });
+
+        window.addEventListener('mouseup', () => {
+            if (isDragging) {
+                isDragging = false;
+                rope.style.transition = 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                rope.style.transform = 'translateY(0px)';
+                
+                setTimeout(() => {
+                    rope.style.transition = 'transform 0.1s ease-out';
+                }, 400);
+            }
+        });
+    </script>
+</body>
+</html>
