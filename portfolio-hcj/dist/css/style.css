@@ -160,3 +160,163 @@
     background: #00A19C;
     box-shadow: 0 0 12px rgba(0, 161, 156, 0.8);
 }
+
+/* ==========================================
+   STYLE TAMBAHAN HERO & INTERAKSI TALI
+   ========================================== */
+
+/* Hero Container */
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+.hero-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Gantungan Tali Interaktif */
+.rope-container {
+    position: absolute;
+    top: 0;
+    right: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: grab;
+    z-index: 100;
+    user-select: none;
+}
+
+.rope-container:active {
+    cursor: grabbing;
+}
+
+.rope-line {
+    width: 3px;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent, #00A19C);
+    box-shadow: 0 0 10px rgba(0, 161, 156, 0.8);
+}
+
+.rope-handle {
+    width: 38px;
+    height: 38px;
+    background: #181b20;
+    border: 2px solid #00A19C;
+    border-radius: 50%;
+    color: #00A19C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 15px rgba(0, 161, 156, 0.6);
+    font-size: 14px;
+}
+
+/* Avatar & Badges */
+.avatar-wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #00A19C;
+    box-shadow: 0 0 25px rgba(0, 161, 156, 0.5);
+}
+
+.f1-badge {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: #00A19C;
+    color: #000;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+/* Teks Welcome */
+.hero-text-content {
+    text-align: center;
+}
+
+.hero-icons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.icon-badge {
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 161, 156, 0.1);
+    border: 1px solid rgba(0, 161, 156, 0.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00A19C;
+    font-size: 14px;
+}
+
+.driver-tag {
+    color: #00A19C;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.hero-welcome-title {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.hero-welcome-title span {
+    color: #00A19C;
+    text-shadow: 0 0 15px rgba(0, 161, 156, 0.6);
+}
+
+.hero-subtitle {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero-badge-link span {
+    display: inline-block;
+    padding: 5px 15px;
+    background: rgba(27, 30, 36, 0.9);
+    border: 1px solid rgba(0, 161, 156, 0.4);
+    border-radius: 20px;
+    color: #8b949e;
+    font-size: 12px;
+    font-family: monospace;
+}
+
+.petronas-stripe {
+    height: 4px;
+    width: 100%;
+    background: #00A19C;
+    box-shadow: 0 0 12px rgba(0, 161, 156, 0.8);
+}
