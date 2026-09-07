@@ -1,5 +1,5 @@
 /* ==========================================
-   RESET & DASAR
+   RESET & BASE STYLE
    ========================================== */
 * {
     margin: 0;
@@ -11,7 +11,7 @@
 html, body {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden; /* Mencegah layar geser ke samping di HP */
+    overflow-x: hidden !important;
     background-color: #0d0f12;
     color: #ffffff;
 }
@@ -27,7 +27,9 @@ a {
     margin: 0 auto;
 }
 
-/* Navbar */
+/* ==========================================
+   NAVBAR
+   ========================================== */
 .navbar {
     padding: 20px 0;
     background: #0d0f12;
@@ -54,7 +56,7 @@ a {
 }
 
 /* ==========================================
-   HERO SECTION & TALI INTERAKTIF
+   HERO SECTION
    ========================================== */
 .hero {
     position: relative;
@@ -100,12 +102,14 @@ a {
     font-weight: 600;
 }
 
-/* Wadah Foto & Tali */
+/* ==========================================
+   FOTO PROFIL, BADGE F1 & TALI INTERAKTIF
+   ========================================== */
 .profile-visuals-wrapper {
     position: relative;
     width: 200px;
     height: 200px;
-    margin: 100px auto 20px auto; /* Memberi ruang agar tali di atas foto muat */
+    margin: 90px auto 20px auto;
 }
 
 .avatar-wrapper {
@@ -123,6 +127,7 @@ a {
     box-shadow: 0 0 25px rgba(0, 161, 156, 0.5);
 }
 
+/* Badge F1 Presisi di Pojok Foto */
 .f1-badge {
     position: absolute;
     bottom: 5px;
@@ -137,19 +142,20 @@ a {
     justify-content: center;
     font-size: 16px;
     box-shadow: 0 0 10px rgba(0, 161, 156, 0.8);
+    z-index: 10;
 }
 
 /* Tali Interaktif */
 .rope-container {
     position: absolute;
-    top: -90px;
+    top: -85px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: grab;
-    z-index: 100;
+    z-index: 20;
     user-select: none;
     width: 40px;
 }
@@ -160,14 +166,14 @@ a {
 
 .rope-line {
     width: 3px;
-    height: 70px;
-    background: linear-gradient(to bottom, transparent, #00A19C);
+    height: 65px;
+    background: #00A19C;
     box-shadow: 0 0 10px rgba(0, 161, 156, 0.8);
 }
 
 .rope-handle {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
     background: #181b20;
     border: 2px solid #00A19C;
     border-radius: 50%;
@@ -175,7 +181,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 0 15px rgba(0, 161, 156, 0.6);
+    box-shadow: 0 0 12px rgba(0, 161, 156, 0.6);
     font-size: 13px;
     margin-top: -2px;
 }
@@ -188,11 +194,15 @@ a {
 }
 
 /* ==========================================
-   PENYESUAIAN RESPONSIF LAYAR HP
+   DESAIN KHUSUS HP (RESPONSIF AUTO)
    ========================================== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+
     .navbar-box .menu {
-        gap: 12px;
+        gap: 10px;
     }
 
     .navbar-box .menu a {
@@ -200,42 +210,42 @@ a {
     }
 
     .welcome-tag {
-        font-size: 12px;
-        letter-spacing: 2px;
+        font-size: 11px;
+        letter-spacing: 1.5px;
     }
 
     .hero-welcome-title {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .hero-subtitle {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .profile-visuals-wrapper {
         width: 160px;
         height: 160px;
-        margin-top: 85px;
+        margin-top: 80px;
     }
 
     .rope-container {
-        top: -80px;
+        top: -75px;
     }
 
     .rope-line {
-        height: 60px;
+        height: 55px;
     }
 
     .rope-handle {
-        width: 30px;
-        height: 30px;
+        width: 28px;
+        height: 28px;
         font-size: 11px;
     }
 
     .f1-badge {
-        width: 32px;
-        height: 32px;
-        font-size: 13px;
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
         bottom: 2px;
         right: 2px;
     }
