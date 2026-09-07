@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 html, body {
@@ -34,13 +35,14 @@ a {
     padding: 20px 0;
     background: #0d0f12;
     width: 100%;
+    border-bottom: 1px solid rgba(0, 161, 156, 0.2);
 }
 
 .navbar-box .menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
     list-style: none;
     flex-wrap: wrap;
     padding: 0;
@@ -58,10 +60,12 @@ a {
     color: #ffffff;
     transition: color 0.3s;
     white-space: nowrap;
+    font-weight: 600;
 }
 
 .navbar-box .menu a:hover {
     color: #00A19C;
+    text-shadow: 0 0 8px rgba(0, 161, 156, 0.6);
 }
 
 /* ==========================================
@@ -83,11 +87,12 @@ a {
     width: 100%;
 }
 
+/* FOTO PROFIL, BADGE F1 & TALI INTERAKTIF */
 .profile-visuals-wrapper {
     position: relative !important;
     width: 200px;
     height: 200px;
-    margin: 90px auto 30px auto;
+    margin: 100px auto 30px auto;
 }
 
 .avatar-wrapper {
@@ -112,20 +117,21 @@ a {
     right: 5px !important;
     background: #00A19C;
     color: #000000;
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 15px;
     box-shadow: 0 0 10px rgba(0, 161, 156, 0.8);
     z-index: 10;
 }
 
+/* Tali (Rope) */
 .rope-container {
     position: absolute !important;
-    top: -85px !important;
+    top: -90px !important;
     left: 50% !important;
     transform: translateX(-50%);
     display: flex;
@@ -143,7 +149,7 @@ a {
 
 .rope-line {
     width: 3px;
-    height: 65px;
+    height: 70px;
     background: #00A19C !important;
     box-shadow: 0 0 10px rgba(0, 161, 156, 0.8);
 }
@@ -159,14 +165,15 @@ a {
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 12px rgba(0, 161, 156, 0.6);
-    font-size: 13px;
+    font-size: 12px;
     margin-top: -2px;
 }
 
+/* TEKS HERO */
 .welcome-tag {
     font-family: 'Orbitron', sans-serif;
     color: #00A19C;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 3px;
     font-weight: 700;
     margin-bottom: 12px;
@@ -178,26 +185,202 @@ a {
 .hero-welcome-title {
     font-family: 'Orbitron', sans-serif;
     font-weight: 900;
-    font-size: 36px;
+    font-size: 34px;
     line-height: 1.2;
     color: #00A19C;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     text-align: center;
     width: 100%;
     text-shadow: 0 0 15px rgba(0, 161, 156, 0.6);
 }
 
 .hero-subtitle {
-    color: #ffffff;
-    font-size: 15px;
+    color: #c5c8d0;
+    font-size: 13px;
     font-weight: 600;
     text-align: center;
     width: 100%;
+    letter-spacing: 2px;
 }
 
 .petronas-stripe {
     height: 4px;
     width: 100%;
-    background: #00A19C;
+    background: linear-gradient(90deg, transparent, #00A19C, transparent);
     box-shadow: 0 0 12px rgba(0, 161, 156, 0.8);
+    margin-top: 40px;
+}
+
+/* ==========================================
+   SECTION: TENTANG & PENDIDIKAN
+   ========================================== */
+.about-section {
+    padding: 80px 0;
+    background: #0d0f12;
+    position: relative;
+}
+
+.section-title-box {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.title-underline {
+    width: 70px;
+    height: 3px;
+    background: #00A19C;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 161, 156, 0.8);
+}
+
+.education-timeline {
+    position: relative;
+    max-width: 750px;
+    margin: 0 auto;
+    padding-left: 30px;
+    border-left: 2px solid rgba(0, 161, 156, 0.3);
+}
+
+.edu-card {
+    position: relative;
+    margin-bottom: 30px;
+    background: #13171d;
+    border: 1px solid rgba(0, 161, 156, 0.2);
+    padding: 20px 25px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.edu-card:hover {
+    border-color: #00A19C;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 161, 156, 0.2);
+}
+
+.edu-card.active {
+    border-color: #00A19C;
+    background: linear-gradient(135deg, #13171d 0%, #102124 100%);
+}
+
+.edu-dot {
+    position: absolute;
+    left: -46px;
+    top: 20px;
+    width: 32px;
+    height: 32px;
+    background: #0d0f12;
+    border: 2px solid #00A19C;
+    border-radius: 50%;
+    color: #00A19C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    box-shadow: 0 0 10px rgba(0, 161, 156, 0.6);
+}
+
+.edu-year {
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 11px;
+    color: #00A19C;
+    font-weight: 700;
+    margin-bottom: 6px;
+    background: rgba(0, 161, 156, 0.1);
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+.edu-content h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.edu-major {
+    font-size: 13px;
+    color: #a0aab2;
+    font-weight: 400;
+}
+
+/* ==========================================
+   RESPONSIF HP (MOBILE)
+   ========================================== */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 92%;
+    }
+
+    .navbar-box .menu {
+        gap: 18px;
+    }
+
+    .navbar-box .menu a {
+        font-size: 11px;
+    }
+
+    .hero-welcome-title {
+        font-size: 24px !important;
+    }
+
+    .hero-subtitle {
+        font-size: 11px !important;
+        letter-spacing: 1px;
+        padding: 0 5px;
+    }
+
+    .profile-visuals-wrapper {
+        width: 170px;
+        height: 170px;
+        margin-top: 85px;
+    }
+
+    .rope-container {
+        top: -80px !important;
+    }
+
+    .rope-line {
+        height: 60px;
+    }
+
+    .f1-badge {
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .education-timeline {
+        padding-left: 25px;
+    }
+
+    .edu-dot {
+        left: -41px;
+        width: 28px;
+        height: 28px;
+        font-size: 10px;
+    }
+
+    .edu-content h3 {
+        font-size: 15px;
+    }
+
+    .edu-card {
+        padding: 15px;
+    }
 }
