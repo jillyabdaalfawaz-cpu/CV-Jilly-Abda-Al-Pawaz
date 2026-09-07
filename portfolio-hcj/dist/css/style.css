@@ -33,18 +33,14 @@ a {
 .navbar {
     padding: 20px 0;
     background: #0d0f12;
-    width: 100%;
 }
 
 .navbar-box .menu {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 20px;
+    gap: 15px;
     list-style: none;
     flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
 }
 
 .navbar-box .menu a {
@@ -53,7 +49,6 @@ a {
     letter-spacing: 1px;
     color: #ffffff;
     transition: color 0.3s;
-    white-space: nowrap;
 }
 
 .navbar-box .menu a:hover {
@@ -61,22 +56,20 @@ a {
 }
 
 /* ==========================================
-   HERO SECTION (PRESISI RATA TENGAH)
+   HERO SECTION
    ========================================== */
 .hero {
     position: relative;
     padding: 30px 0 50px 0;
     background: #0d0f12;
-    width: 100%;
 }
 
 .hero-box {
     display: flex;
     flex-direction: column;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .welcome-tag {
@@ -87,8 +80,6 @@ a {
     font-weight: 700;
     margin-bottom: 12px;
     text-transform: uppercase;
-    text-align: center;
-    width: 100%;
 }
 
 .hero-welcome-title {
@@ -98,8 +89,6 @@ a {
     line-height: 1.2;
     color: #ffffff;
     margin-bottom: 10px;
-    text-align: center;
-    width: 100%;
 }
 
 .hero-welcome-title span {
@@ -111,8 +100,6 @@ a {
     color: #ffffff;
     font-size: 15px;
     font-weight: 600;
-    text-align: center;
-    width: 100%;
 }
 
 /* ==========================================
@@ -122,7 +109,7 @@ a {
     position: relative;
     width: 200px;
     height: 200px;
-    margin: 90px auto 20px auto; /* Ruang 90px di atas untuk tali */
+    margin: 90px auto 20px auto;
 }
 
 .avatar-wrapper {
@@ -140,7 +127,7 @@ a {
     box-shadow: 0 0 25px rgba(0, 161, 156, 0.5);
 }
 
-/* Badge F1 Presisi di Kanan Bawah Foto */
+/* Badge F1 Presisi di Pojok Foto */
 .f1-badge {
     position: absolute;
     bottom: 5px;
@@ -207,24 +194,26 @@ a {
 }
 
 /* ==========================================
-   PENYESUAIAN HP (TETAP RAPI & TIDAK TERPOTONG)
+   PENYESUAIAN RESPONSIF LAYAR KECIL (HP)
    ========================================== */
 @media screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+
     .navbar-box .menu {
-        gap: 12px;
+        gap: 8px;
     }
 
     .navbar-box .menu a {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .hero-welcome-title {
-        font-size: 26px;
+        font-size: 24px;
     }
 
-    .profile-visuals-wrapper {
-        width: 170px;
-        height: 170px;
-        margin-top: 85px;
+    .hero-subtitle {
+        font-size: 12px;
     }
 }
