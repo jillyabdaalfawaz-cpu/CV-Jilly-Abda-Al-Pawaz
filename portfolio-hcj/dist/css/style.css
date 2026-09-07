@@ -528,16 +528,27 @@ section, .tentang, .pendidikan-section, .pengalaman, .proyek, .kontak {
         font-size: 1rem;
     }
     
-    /* Perbaikan khusus untuk bagian kontak di HP */
+    /* Perbaikan khusus untuk bagian kontak di HP (posisi di tengah) */
     .kontak-box .box {
-        padding: 20px;
+        padding: 25px 20px;
+        text-align: center;
+        margin: 0 auto;
     }
     .kontak-list li {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        margin-bottom: 22px;
+        text-align: center;
+    }
+    .kontak-list li i {
+        font-size: 1.2rem;
+        margin-bottom: 2px;
     }
     .kontak-list li strong {
         min-width: unset;
+        display: block;
+        margin-bottom: 2px;
     }
 }
