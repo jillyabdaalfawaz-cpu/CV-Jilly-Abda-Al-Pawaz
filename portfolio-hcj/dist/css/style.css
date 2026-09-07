@@ -521,3 +521,17 @@ section, .tentang, .pendidikan-section, .pengalaman, .proyek, .kontak {
         font-size: 1.8rem;
     }
 }
+
+/* Responsif untuk HP / Mobile */
+@media (max-width: 768px) {
+    .avatar-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+    .hero-name {
+        font-size: 1.6rem;
+    }
+    .hero-typing-wrapper {
+        font-size: 1rem;
+    }
+}
