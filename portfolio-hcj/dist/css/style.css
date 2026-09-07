@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 html, body {
@@ -204,7 +205,7 @@ a {
 }
 
 /* ==========================================
-   TENTANG & PENDIDIKAN SECTION
+   SECTION: TENTANG & PENDIDIKAN (TIMELINE)
    ========================================== */
 .about-section {
     padding: 80px 0;
@@ -219,16 +220,16 @@ a {
 
 .section-title {
     font-family: 'Orbitron', sans-serif;
-    font-size: 28px;
+    font-size: 26px;
     font-weight: 800;
     color: #ffffff;
     letter-spacing: 2px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .title-underline {
-    width: 80px;
-    height: 4px;
+    width: 70px;
+    height: 3px;
     background: #00A19C;
     margin: 0 auto;
     box-shadow: 0 0 10px rgba(0, 161, 156, 0.8);
@@ -236,7 +237,7 @@ a {
 
 .education-timeline {
     position: relative;
-    max-width: 800px;
+    max-width: 750px;
     margin: 0 auto;
     padding-left: 30px;
     border-left: 2px solid rgba(0, 161, 156, 0.3);
@@ -244,11 +245,11 @@ a {
 
 .edu-card {
     position: relative;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
     background: #13171d;
     border: 1px solid rgba(0, 161, 156, 0.2);
     padding: 20px 25px;
-    border-radius: 8px;
+    border-radius: 6px;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
@@ -277,31 +278,32 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
+    font-size: 11px;
     box-shadow: 0 0 10px rgba(0, 161, 156, 0.6);
 }
 
 .edu-year {
     display: inline-block;
     font-family: 'Orbitron', sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     color: #00A19C;
     font-weight: 700;
     margin-bottom: 6px;
     background: rgba(0, 161, 156, 0.1);
     padding: 3px 8px;
     border-radius: 4px;
+    letter-spacing: 1px;
 }
 
 .edu-content h3 {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 5px;
 }
 
 .edu-major {
-    font-size: 14px;
+    font-size: 13px;
     color: #a0aab2;
     font-weight: 400;
 }
@@ -352,15 +354,11 @@ a {
         font-size: 13px;
     }
 
-    .section-title {
-        font-size: 22px;
+    .edu-card {
+        padding: 15px;
     }
 
     .edu-content h3 {
-        font-size: 16px;
-    }
-
-    .edu-card {
-        padding: 15px;
+        font-size: 15px;
     }
 }

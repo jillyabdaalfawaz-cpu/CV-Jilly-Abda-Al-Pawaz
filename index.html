@@ -7,8 +7,8 @@
     <!-- Favicon -->
     <link rel="shortcut icon" href="./assets/icon/favicon.ico" type="image/x-icon" />
 
-    <!-- CSS (Sejajar dengan index.html) -->
-    <link rel="stylesheet" href="./dist/css/style.css" />
+    <!-- CSS (Langsung Memanggil style.css Sejajar) -->
+    <link rel="stylesheet" href="./style.css" />
 
     <!-- FontAwesome (Icon) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
@@ -24,7 +24,7 @@
 
     <header>
         <!-- Navbar -->
-        <nav class="navbar">
+        <div class="navbar">
             <div class="container">
                 <div class="navbar-box">
                     <ul class="menu">
@@ -35,14 +35,14 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </div>
 
         <!-- Hero Section -->
         <div class="hero">
             <div class="container">
                 <div class="hero-box">
                     
-                    <!-- Foto Profil, Badge F1 & Tali -->
+                    <!-- 1. Foto Profil & Tali di Paling Atas -->
                     <div class="profile-visuals-wrapper">
                         <div class="rope-container" id="ropeContainer" title="Tarik saya!">
                             <div class="rope-line"></div>
@@ -56,15 +56,15 @@
                         </div>
                     </div>
 
-                    <!-- Welcome Tag -->
+                    <!-- 2. Teks WELCOME -->
                     <div class="welcome-tag">WELCOME TO MY CURRICULUM VITAE</div>
                     
-                    <!-- Nama / Typed Text -->
+                    <!-- 3. Nama -->
                     <h1 class="hero-welcome-title">
                         <span id="element"></span>
                     </h1>
 
-                    <!-- Subtitle -->
+                    <!-- 4. Subtitle -->
                     <p class="hero-subtitle">DATA ANALYTICS | EDUCATIONAL MANAGEMENT | RESEARCH</p>
 
                 </div>
@@ -78,7 +78,7 @@
     <section id="tentang" class="about-section">
         <div class="container">
             <div class="section-title-box">
-                <h2 class="section-title">TENTANG &amp; PENDIDIKAN</h2>
+                <h2 class="section-title">EDUCATION</h2>
                 <div class="title-underline"></div>
             </div>
 
