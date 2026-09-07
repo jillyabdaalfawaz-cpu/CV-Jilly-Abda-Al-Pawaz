@@ -83,7 +83,7 @@ a {
    FOTO PROFIL, BADGE F1 & TALI (DI ATAS TEKS)
    ========================================== */
 .profile-visuals-wrapper {
-    position: relative;
+    position: relative !important;
     width: 200px;
     height: 200px;
     margin: 90px auto 30px auto; /* Margin top memberi ruang untuk tali */
@@ -93,6 +93,7 @@ a {
     position: relative;
     width: 100%;
     height: 100%;
+    border-radius: 50%;
 }
 
 .avatar-wrapper img {
@@ -105,9 +106,9 @@ a {
 }
 
 .f1-badge {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
+    position: absolute !important;
+    bottom: 5px !important;
+    right: 5px !important;
     background: #00A19C;
     color: #000000;
     width: 36px;
@@ -123,9 +124,9 @@ a {
 
 /* Tali Interaktif */
 .rope-container {
-    position: absolute;
-    top: -85px;
-    left: 50%;
+    position: absolute !important;
+    top: -85px !important;
+    left: 50% !important;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
@@ -143,7 +144,7 @@ a {
 .rope-line {
     width: 3px;
     height: 65px;
-    background: #00A19C;
+    background: #00A19C !important;
     box-shadow: 0 0 10px rgba(0, 161, 156, 0.8);
 }
 
@@ -206,25 +207,45 @@ a {
    PENYESUAIAN RESPONSIF HP
    ========================================== */
 @media screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+    }
+
     .navbar-box .menu {
-        gap: 12px;
+        gap: 8px;
+        flex-wrap: nowrap;
     }
 
     .navbar-box .menu a {
-        font-size: 11px;
+        font-size: 10px;
     }
 
     .hero-welcome-title {
-        font-size: 24px;
+        font-size: 22px !important;
     }
 
     .hero-subtitle {
-        font-size: 12px;
+        font-size: 11px !important;
+        padding: 0 10px;
     }
 
     .profile-visuals-wrapper {
-        width: 170px;
-        height: 170px;
-        margin-top: 85px;
+        width: 160px;
+        height: 160px;
+        margin-top: 80px;
+    }
+
+    .rope-container {
+        top: -75px !important;
+    }
+
+    .rope-line {
+        height: 55px;
+    }
+
+    .f1-badge {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
     }
 }
