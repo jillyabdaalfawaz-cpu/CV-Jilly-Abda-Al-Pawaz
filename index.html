@@ -49,10 +49,13 @@
                 
                 <div class="welcome-tag">WELCOME TO MY CURRICULUM VITAE</div>
                 
-                <!-- Nama Utama yang Langsung Tampil -->
-                <h1 class="hero-welcome-title">
-                    <span>Jilly Abda Al Pawaz</span>
-                </h1>
+                <!-- Nama Lengkap (Di luar lingkaran foto) -->
+                <h1 class="hero-name">Jilly Abda Al Pawaz</h1>
+                
+                <!-- Elemen untuk Animasi Ketik (JavaScript) -->
+                <div class="hero-typing-wrapper">
+                    <span id="element"></span>
+                </div>
                 
                 <p class="hero-subtitle">DATA ANALYTICS | EDUCATIONAL MANAGEMENT | RESEARCH</p>
             </div>
@@ -245,7 +248,16 @@
         </div>
     </section>
 
-    <!-- Script External (Opsional) -->
+    <!-- Script CDN Typed.js untuk Animasi Mengetik -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Data Analyst in Training', 'Educational Management Student', 'Research Enthusiast'],
+            typeSpeed: 60,
+            backSpeed: 40,
+            loop: true
+        });
+    </script>
     <script src="dist/js/main.js"></script>
 </body>
 </html>
