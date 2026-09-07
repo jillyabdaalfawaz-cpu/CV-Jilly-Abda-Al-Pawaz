@@ -19,64 +19,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Poppins:wght@300;400;600;700&family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <style>
-        .welcome-tag {
-            font-family: 'Orbitron', sans-serif;
-            color: #00A19C;
-            font-size: 14px;
-            letter-spacing: 3px;
-            font-weight: 700;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-        }
-
-        .profile-visuals-wrapper {
-            position: relative;
-            width: 220px;
-            height: 220px;
-            margin: 30px auto 0 auto;
-        }
-
-        .rope-container {
-            position: absolute;
-            top: -100px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            cursor: grab;
-            z-index: 100;
-            user-select: none;
-            width: 40px;
-            height: 120px;
-        }
-        .rope-container:active { cursor: grabbing; }
-
-        .rope-line {
-            width: 3px;
-            height: 80px;
-            background: linear-gradient(to bottom, transparent, #00A19C);
-            box-shadow: 0 0 10px rgba(0, 161, 156, 0.8);
-        }
-
-        .rope-handle {
-            width: 36px;
-            height: 36px;
-            background: #181b20;
-            border: 2px solid #00A19C;
-            border-radius: 50%;
-            color: #00A19C;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 15px rgba(0, 161, 156, 0.6);
-            font-size: 13px;
-            margin-top: -2px;
-        }
-        .rope-handle:hover { background: #00A19C; color: #000; }
-    </style>
 </head>
 <body>
 
@@ -99,15 +41,16 @@
         <!-- Hero -->
         <div class="hero">
             <div class="container">
-                <div class="hero-box" style="text-align: center;">
+                <div class="hero-box">
                     
-                    <!-- TEKS DIPERBAIKI (RINGKAS & BERSIH) -->
-                    <div class="welcome-tag">WELCOME TO MY CURRICULUM VITAE</div>
-                    
-                    <h1>
-                        <span id="element"></span>
-                    </h1>
-                    <p class="hero-subtitle">DATA ANALYTICS | EDUCATIONAL MANAGEMENT | RESEARCH</p>
+                    <div class="hero-text-content">
+                        <div class="welcome-tag">WELCOME TO MY CURRICULUM VITAE</div>
+                        
+                        <h1 class="hero-welcome-title">
+                            <span id="element"></span>
+                        </h1>
+                        <p class="hero-subtitle">DATA ANALYTICS | EDUCATIONAL MANAGEMENT | RESEARCH</p>
+                    </div>
 
                     <!-- Wadah Foto dengan Tali Interaktif -->
                     <div class="profile-visuals-wrapper">
@@ -310,23 +253,41 @@
             loop: false
         });
 
-        /* Script Animasi Tali Interaktif */
+        /* Script Animasi Tali Interaktif (Multi-Touch / Responsive) */
         const rope = document.getElementById('ropeContainer');
         let isDragging = false, startY = 0;
-        rope.addEventListener('mousedown', (e) => { isDragging = true; startY = e.clientY; });
-        window.addEventListener('mousemove', (e) => {
+
+        const handleStart = (clientY) => {
+            isDragging = true;
+            startY = clientY;
+        };
+
+        const handleMove = (clientY) => {
             if (!isDragging) return;
-            const deltaY = e.clientY - startY;
-            if (deltaY > 0 && deltaY < 120) rope.style.transform = `translateX(-50%) translateY(${deltaY}px)`;
-        });
-        window.addEventListener('mouseup', () => {
+            const deltaY = clientY - startY;
+            if (deltaY > 0 && deltaY < 100) {
+                rope.style.transform = `translateX(-50%) translateY(${deltaY}px)`;
+            }
+        };
+
+        const handleEnd = () => {
             if (isDragging) {
                 isDragging = false;
                 rope.style.transition = 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
                 rope.style.transform = 'translateX(-50%) translateY(0px)';
                 setTimeout(() => { rope.style.transition = 'transform 0.1s ease-out'; }, 400);
             }
-        });
+        };
+
+        // Event listener Mouse (Desktop)
+        rope.addEventListener('mousedown', (e) => handleStart(e.clientY));
+        window.addEventListener('mousemove', (e) => handleMove(e.clientY));
+        window.addEventListener('mouseup', handleEnd);
+
+        // Event listener Touch (HP / Tablet)
+        rope.addEventListener('touchstart', (e) => handleStart(e.touches[0].clientY));
+        window.addEventListener('touchmove', (e) => handleMove(e.touches[0].clientY));
+        window.addEventListener('touchend', handleEnd);
     </script>
 </body>
 </html>
