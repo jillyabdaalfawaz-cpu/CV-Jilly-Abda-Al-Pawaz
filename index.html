@@ -1,132 +1,97 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <!-- Favicon -->
-    <link rel="shortcut icon" href="./assets/icon/favicon.ico" type="image/x-icon" />
-
-   <!-- CSS External -->
-<link rel="stylesheet" href="style.css" />
-
+    <link rel="shortcut icon" href="assets/icon/favicon.ico" />
+    
+    <!-- CSS External -->
+    <link rel="stylesheet" href="style.css" />
+    
     <!-- FontAwesome (Untuk Icon) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+    
     <title>CV | Jilly Abda Al Pawaz</title>
-
+    
     <!-- Font Racing & Modern -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Poppins:wght@300;400;600;700&family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;600&family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header & Hero Section -->
-    <header>
-        <!-- Navbar -->
-        <nav class="navbar">
-            <div class="container">
-                <div class="navbar-box">
-                    <ul class="menu">
-                        <li><a href="#tentang">TENTANG</a></li>
-                        <li><a href="#pendidikan">PENDIDIKAN</a></li>
-                        <li><a href="#pengalaman">PENGALAMAN</a></li>
-                        <li><a href="#proyek">PROYEK</a></li>
-                        <li><a href="#kontak">KONTAK</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Hero -->
-        <div class="hero">
-            <div class="container">
-                <div class="hero-box">
-                    <!-- Wadah Foto dengan Tali Interaktif -->
-                    <div class="profile-visuals-wrapper">
-                        <div class="rope-container" id="ropeContainer" title="Tarik saya!">
-                            <div class="rope-line"></div>
-                            <div class="rope-handle" id="ropeHandle">
-                                <i class="fa-solid fa-arrows-up-down"></i>
-                            </div>
-                        </div>
-                        <div class="avatar-wrapper">
-                            <img src="./assets/images/fotojilly.jpeg.jpeg" alt="Foto Profil Jilly Abda Al Pawaz" />
-                            <div class="f1-badge"><i class="fa-solid fa-flag-checkered"></i></div>
-                        </div>
-                    </div>
-
-                    <div class="welcome-tag">WELCOME TO MY CURRICULUM VITAE</div>
-                    
-                    <h1 class="hero-welcome-title">
-                        <span id="element"></span>
-                    </h1>
-                    <p class="hero-subtitle">DATA ANALYTICS | EDUCATIONAL MANAGEMENT | RESEARCH</p>
-                </div>
-            </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container navbar-box">
+            <ul class="menu">
+                <li><a href="#tentang">01. TENTANG</a></li>
+                <li><a href="#pendidikan">02. PENDIDIKAN</a></li>
+                <li><a href="#pengalaman">03. PENGALAMAN</a></li>
+                <li><a href="#proyek">04. PROYEK</a></li>
+                <li><a href="#kontak">05. KONTAK</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <!-- Petronas Teal Accent Bar Line -->
-        <div class="petronas-stripe"></div>
-    </header> 
-
-    <!-- Section: Tentang -->
-    <section class="tentang" id="tentang">
-        <div class="container">
-            <h1 class="section-title"><span>01.</span> TENTANG</h1>
-            <div class="tentang-box">
-                <!-- Box Kiri: Profil -->
-                <div class="box">
-                    <p class="about-text">
-                        Hai, Nama saya <span>Jilly Abda Al Pawaz</span>. Saya adalah mahasiswa Program Studi Manajemen Pendidikan (FITK) di <span>UIN Syarif Hidayatullah Jakarta</span> yang memiliki tekad kuat untuk membangun karir di bidang <strong>Data Analytics</strong>.
-                    </p>
-                    <p class="about-text">
-                        Menggabungkan pola pikir manajerial dari bangku kuliah dengan semangat belajar yang tinggi, saya bertekad untuk terus mengasah keterampilan teknis dalam pengolahan data. Saya memiliki ketertarikan besar dalam mengubah baris data mentah menjadi tampilan visual dan wawasan interaktif yang bermanfaat, serta siap berkontribusi dalam posisi entry-level maupun internship.
-                    </p>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-box">
+            <div class="profile-visuals-wrapper">
+                <div class="avatar-wrapper">
+                    <img src="fotojilly.jpeg.jpeg" alt="Jilly Abda Al Pawaz">
+                    <div class="f1-badge"><i class="fa-solid fa-flag-checkered"></i></div>
                 </div>
-                
-                <!-- Box Kanan: Ringkasan Data Pribadi -->
+            </div>
+            <div class="welcome-tag">WELCOME TO MY CURRICULUM VITAE</div>
+            <h1 class="hero-welcome-title">JILLY ABDA AL PAWAZ</h1>
+            <p class="hero-subtitle">DATA ANALYTICS | EDUCATIONAL MANAGEMENT | RESEARCH</p>
+        </div>
+        <div class="petronas-stripe"></div>
+    </header>
+
+    <!-- Tentang Section -->
+    <section id="tentang" class="tentang">
+        <div class="container">
+            <h2 class="section-title"><span>01.</span> TENTANG</h2>
+            <div class="tentang-box">
+                <div class="box">
+                    <p class="about-text">Hai, Nama saya <span>Jilly Abda Al Pawaz</span>. Saya adalah mahasiswa Program Studi Manajemen Pendidikan (FITK) di UIN Syarif Hidayatullah Jakarta yang memiliki tekad kuat untuk membangun karir di bidang Data Analytics.</p>
+                    <p class="about-text">Menggabungkan pola pikir manajerial dari bangku kuliah dengan semangat belajar yang tinggi, saya bertekad untuk terus mengasah keterampilan teknis dalam pengolahan data. Saya memiliki ketertarikan besar dalam mengubah baris data mentah menjadi tampilan visual dan wawasan interaktif yang bermanfaat, serta siap berkontribusi dalam posisi entry-level maupun internship.</p>
+                </div>
                 <div class="box">
                     <h3>DATA PRIBADI</h3>
                     <ul class="personal-data-list">
-                        <li><strong>NAMA LENGKAP</strong> <span>Jilly Abda Al Pawaz</span></li>
-                        <li><strong>LAHIR</strong> <span>Jakarta, 16 April 2006</span></li>
-                        <li><strong>ALAMAT</strong> <span>Jl. Kebon Kelapa RT 02/RW 02, Kel. Kamal, Kec. Kalideres, Jakarta Barat</span></li>
+                        <li><strong>NAMA LENGKAP</strong><span>Jilly Abda Al Pawaz</span></li>
+                        <li><strong>LAHIR</strong><span>Jakarta, 16 April 2006</span></li>
+                        <li><strong>ALAMAT</strong><span>Jl. Kebon Kelapa RT 02/RW 02, Kel. Kamal, Kec. Kalideres, Jakarta Barat</span></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section: Pendidikan -->
-    <section class="pendidikan-section" id="pendidikan">
+    <!-- Pendidikan Section -->
+    <section id="pendidikan" class="pendidikan-section">
         <div class="container">
-            <h1 class="section-title"><span>02.</span> PENDIDIKAN</h1>
-            
+            <h2 class="section-title"><span>02.</span> PENDIDIKAN</h2>
             <div class="education-timeline">
-                <!-- Item 1: UIN -->
                 <div class="edu-card active">
                     <span class="edu-year">2025 – Sekarang</span>
                     <h3>Universitas Islam Negeri (UIN) Syarif Hidayatullah Jakarta</h3>
                     <p class="edu-major">S1 Manajemen Pendidikan, Fakultas Ilmu Tarbiyah dan Keguruan (FTIK)</p>
                 </div>
-
-                <!-- Item 2: MA -->
                 <div class="edu-card">
                     <span class="edu-year">2022 – 2025</span>
                     <h3>MA Daarul Rahman</h3>
                     <p class="edu-major">Madrasah Aliyah</p>
                 </div>
-
-                <!-- Item 3: MTs -->
                 <div class="edu-card">
                     <span class="edu-year">2019 – 2022</span>
                     <h3>MTs Daarul Rahman</h3>
                     <p class="edu-major">Madrasah Tsanawiyah</p>
                 </div>
-
-                <!-- Item 4: MIN -->
                 <div class="edu-card">
                     <span class="edu-year">2013 – 2019</span>
                     <h3>MIN 1 Jakarta</h3>
@@ -136,22 +101,19 @@
         </div>
     </section>
 
-    <!-- Section: Pengalaman -->
-    <section class="pengalaman" id="pengalaman">
+    <!-- Pengalaman Section -->
+    <section id="pengalaman" class="pengalaman">
         <div class="container">
-            <h1 class="section-title"><span>03.</span> PENGALAMAN & KEGIATAN</h1>
+            <h2 class="section-title"><span>03.</span> PENGALAMAN & KEGIATAN</h2>
             <div class="pengalaman-box">
-                
-                <!-- Pengalaman 1: Staff HCGA -->
+                <!-- Pengalaman 1 -->
                 <div class="box">
                     <div class="box-header">
                         <h3>STAFF HCGA (INTERNSHIP)</h3>
                         <span class="role-badge">MAGANG 3 BULAN</span>
                     </div>
-                    <p class="sub-title">PT PILAR NIAGA MAKMUR</p>
-                    <p class="box-desc">
-                        Mendukung operasional HRD dan General Affairs dengan memanfaatkan keterampilan <strong>Microsoft Excel</strong> untuk meningkatkan efisiensi kerja. Bertanggung jawab dalam:
-                    </p>
+                    <div class="sub-title">PT PILAR NIAGA MAKMUR</div>
+                    <p class="box-desc">Mendukung operasional HRD dan General Affairs dengan memanfaatkan keterampilan Microsoft Excel untuk meningkatkan efisiensi kerja. Bertanggung jawab dalam:</p>
                     <ul class="task-list">
                         <li>Melakukan rekapitulasi gaji karyawan secara akurat.</li>
                         <li>Membantu HRD mengelola data absensi harian dan membuat laporan mingguan bersama Manager HRD.</li>
@@ -165,8 +127,8 @@
                         <h3>SCRIPTING & PDD (KHUSUS SPEAKER)</h3>
                         <span class="role-badge">EVENT</span>
                     </div>
-                    <p class="sub-title">GENERASI MUDA BELA NEGARA TNI TINGKAT PUSAT | 11 FEBRUARI 2026</p>
-                    <p class="box-desc">Menyusun naskah (<em>scripting</em>) materi pembicara serta mengoordinasikan tim Publikasi, Dekorasi, dan Dokumentasi (PDD) demi kelancaran acara Pembimbingan Kesadaran Bela Negara TNI TA 2025.</p>
+                    <div class="sub-title">GENERASI MUDA BELA NEGARA TNI TINGKAT PUSAT | 11 FEBRUARI 2026</div>
+                    <p class="box-desc">Menyusun naskah (scripting) materi pembicara serta mengoordinasikan tim Publikasi, Dekorasi, dan Dokumentasi (PDD) demi kelancaran acara Pembimbingan Kesadaran Bela Negara TNI TA 2025.</p>
                 </div>
 
                 <!-- Pengalaman 3 -->
@@ -175,7 +137,7 @@
                         <h3>VOLUNTEER - PETUALANGAN SATWA</h3>
                         <span class="role-badge">VOLUNTEER</span>
                     </div>
-                    <p class="sub-title">INVOLUNTIR JAKARTA | 23 NOVEMBER 2025</p>
+                    <div class="sub-title">INVOLUNTIR JAKARTA | 23 NOVEMBER 2025</div>
                     <p class="box-desc">Menjadi relawan dalam agenda kunjungan edukatif ke Ragunan bersama adik-adik Mizan Amanah Salihara untuk mengoordinasikan kegiatan lapangan dan edukasi satwa.</p>
                 </div>
 
@@ -185,17 +147,17 @@
                         <h3>ANGGOTA ORGANISASI</h3>
                         <span class="role-badge">ACTIVE</span>
                     </div>
-                    <p class="sub-title">HIPMI (HIMPUNAN PENGUSAHA MUDA INDONESIA) | SEKARANG</p>
+                    <div class="sub-title">HIPMI (HIMPUNAN PENGUSAHA MUDA INDONESIA) | SEKARANG</div>
                     <p class="box-desc">Aktif mengikuti jaringan, seminar, dan kegiatan kewirausahaan guna mengembangkan pola pikir bisnis serta memperluas relasi profesional.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Section: Proyek -->
-    <section class="proyek" id="proyek">
+    <!-- Proyek Section -->
+    <section id="proyek" class="proyek">
         <div class="container">
-            <h1 class="section-title"><span>04.</span> PROYEK ANALISIS DATA</h1>
+            <h2 class="section-title"><span>04.</span> PROYEK ANALISIS DATA</h2>
             <p class="proyek-desc">Portofolio dasbor analisis interaktif dan alur pemrosesan tools pengolahan data:</p>
             
             <div class="proyek-box">
@@ -204,7 +166,7 @@
                     <h3>PROJECT DATA PROFESSIONAL BREAKDOWN (MODEL A)</h3>
                     <p class="box-desc mb-20">Dasbor analisis interaktif menggunakan tema bawaan Copilot untuk memvisualisasikan metrik performa data profesional, sebaran demografi negara responden, rata-rata gaji berdasarkan jabatan, tingkat kepuasan kerja, serta bahasa pemrograman terfavorit.</p>
                     <div class="btn-wrapper">
-                        <a href="https://drive.google.com/file/d/1qtLH-NPU8-o_QhKmYx1EvOTveP7G745z/view?usp=sharing" target="_blank" class="btn-proyek">LIHAT DOKUMEN PROYEK (A) <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="assets/images/proyek/proyekA.pdf.pdf" target="_blank" class="btn-proyek"><i class="fa-solid fa-arrow-up-right-from-square"></i> LIHAT DOKUMEN PROYEK (A)</a>
                     </div>
                 </div>
 
@@ -213,45 +175,41 @@
                     <h3>PROJECT DATA PROFESSIONAL BREAKDOWN (MODEL B)</h3>
                     <p class="box-desc mb-20">Pengembangan dasbor tingkat lanjut menggunakan integrasi skema tema Temperature dan optimasi formula DAX Queries untuk memproses pembersihan, pemodelan hubungan tabel penjualan produk, analisis biaya produksi, serta tren volume pembelian berkala.</p>
                     <div class="btn-wrapper">
-                        <a href="https://drive.google.com/file/d/1WwuT185dxBPhrPh5rkZfno6RkZjvKBv2/view?usp=sharing" target="_blank" class="btn-proyek">LIHAT DOKUMEN PROYEK (B) <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="assets/images/proyek/proyekB.pdf.pdf" target="_blank" class="btn-proyek"><i class="fa-solid fa-arrow-up-right-from-square"></i> LIHAT DOKUMEN PROYEK (B)</a>
                     </div>
                 </div>
 
-                <!-- Alur Tools -->
+                <!-- Pipeline / Tools (Full Width) -->
                 <div class="box box-full">
                     <h3>TELEMETRY & ALUR PEMAKAIAN TOOLS</h3>
                     <p class="pipeline-subtitle">Dokumentasi bertahap proses eksekusi pipeline data dari awal hingga pelaporan akhir:</p>
-                    
                     <div class="pipeline-grid">
                         <div class="pipeline-step">
-                            <div class="step-num">01</div>
+                            <span class="step-num">01</span>
                             <div>
-                                <h4>Microsoft Excel (Data Cleaning & Prep)</h4>
-                                <p>Penghapusan data duplikat, perbaikan format teks, pembersihan spasi dengan TRIM, penyelarasan format tanggal, serta penanganan nilai kosong (missing values).</p>
+                                <h4>Microsoft Excel</h4>
+                                <p>Data Cleaning & Prep (Penghapusan duplikat, TRIM, format tanggal, & missing values).</p>
                             </div>
                         </div>
-
                         <div class="pipeline-step">
-                            <div class="step-num">02</div>
+                            <span class="step-num">02</span>
                             <div>
-                                <h4>MySQL (Database Storage & Querying)</h4>
-                                <p>Upload dataset ke database MySQL dan manipulasi data tingkat lanjut menggunakan kueri SQL (Data Querying) seperti filter kondisi, agregasi, serta penggabungan tabel (JOIN).</p>
+                                <h4>MySQL</h4>
+                                <p>Database Storage & Querying (Upload dataset, manipulasi data, filter, & JOIN).</p>
                             </div>
                         </div>
-
                         <div class="pipeline-step">
-                            <div class="step-num">03</div>
+                            <span class="step-num">03</span>
                             <div>
-                                <h4>Python (Exploratory Data Analysis)</h4>
-                                <p>Menggunakan library Pandas dan NumPy untuk analisis eksplorasi data (EDA) mendalam, melihat korelasi antar variabel, serta konfirmasi tren statistik penting.</p>
+                                <h4>Python</h4>
+                                <p>Exploratory Data Analysis (Pandas & NumPy untuk EDA mendalam & korelasi).</p>
                             </div>
                         </div>
-
                         <div class="pipeline-step">
-                            <div class="step-num">04</div>
+                            <span class="step-num">04</span>
                             <div>
-                                <h4>Power BI (Data Visualization & Dashboard)</h4>
-                                <p>Membangun model relasi tabel data, penyusunan kalkulasi kustom dengan bahasa DAX, serta desain dasbor grafik interaktif pendukung keputusan strategis.</p>
+                                <h4>Power BI</h4>
+                                <p>Data Visualization & Dashboard (Model relasi tabel, DAX custom, & desain interaktif).</p>
                             </div>
                         </div>
                     </div>
@@ -260,66 +218,23 @@
         </div>
     </section>
 
-    <!-- Section: Kontak -->
-    <section class="kontak" id="kontak">
+    <!-- Kontak Section -->
+    <section id="kontak" class="kontak">
         <div class="container">
-            <h1 class="section-title"><span>05.</span> HUBUNGI SAYA</h1>
+            <h2 class="section-title"><span>05.</span> HUBUNGI SAYA</h2>
             <div class="kontak-box">
                 <div class="box">
                     <p class="kontak-intro">SIAP BERKONTRIBUSI DALAM TIM DAN PROYEK ANALISIS DATA TERBAIK</p>
                     <ul class="kontak-list">
-                        <li><i class="fa-solid fa-envelope"></i> <strong>EMAIL</strong> <span>abdaalfawaz@gmail.com</span></li>
-                        <li><i class="fa-solid fa-phone"></i> <strong>TELEPON</strong> <span>+62 854-4510-8984</span></li>
-                        <li><i class="fa-brands fa-instagram"></i> <strong>INSTAGRAM</strong> <a href="https://www.instagram.com/sijills_?igsi=bjc5OWZiemJ0Nmd6&utm_source=qr" target="_blank" class="link-sosmed">@sijills_</a></li>
-                        <li><i class="fa-solid fa-location-dot"></i> <strong>LOKASI</strong> <span>Jakarta, Indonesia</span></li>
+                        <li><i class="fa-solid fa-envelope"></i><strong>EMAIL</strong><a href="mailto:abdaalfawaz@gmail.com" class="link-sosmed">abdaalfawaz@gmail.com</a></li>
+                        <li><i class="fa-solid fa-phone"></i><strong>TELEPON</strong><span>+62 854-4510-8984</span></li>
+                        <li><i class="fa-brands fa-instagram"></i><strong>INSTAGRAM</strong><a href="https://instagram.com/sijills_" target="_blank" class="link-sosmed">@sijills_</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><strong>LOKASI</strong><span>Jakarta, Indonesia</span></li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Typed JS -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script>
-        var typed = new Typed("#element", {
-            strings: ["JILLY ABDA AL PAWAZ"],
-            typeSpeed: 100,
-            loop: false
-        });
-
-        /* Script Animasi Tali Interaktif */
-        const rope = document.getElementById('ropeContainer');
-        let isDragging = false, startY = 0;
-
-        const handleStart = (clientY) => {
-            isDragging = true;
-            startY = clientY;
-        };
-
-        const handleMove = (clientY) => {
-            if (!isDragging) return;
-            const deltaY = clientY - startY;
-            if (deltaY > 0 && deltaY < 100) {
-                rope.style.transform = `translateX(-50%) translateY(${deltaY}px)`;
-            }
-        };
-
-        const handleEnd = () => {
-            if (isDragging) {
-                isDragging = false;
-                rope.style.transition = 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-                rope.style.transform = 'translateX(-50%) translateY(0px)';
-                setTimeout(() => { rope.style.transition = 'transform 0.1s ease-out'; }, 400);
-            }
-        };
-
-        rope.addEventListener('mousedown', (e) => handleStart(e.clientY));
-        window.addEventListener('mousemove', (e) => handleMove(e.clientY));
-        window.addEventListener('mouseup', handleEnd);
-
-        rope.addEventListener('touchstart', (e) => handleStart(e.touches[0].clientY));
-        window.addEventListener('touchmove', (e) => handleMove(e.touches[0].clientY));
-        window.addEventListener('touchend', handleEnd);
-    </script>
 </body>
 </html>

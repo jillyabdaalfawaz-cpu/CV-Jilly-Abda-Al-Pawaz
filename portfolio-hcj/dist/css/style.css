@@ -74,45 +74,10 @@ body {
     align-items: center;
 }
 
-/* Profile Visuals & Rope Interactive */
+/* Profile Visuals */
 .profile-visuals-wrapper {
     position: relative;
     margin-bottom: 30px;
-}
-
-.rope-container {
-    position: absolute;
-    top: -60px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 60px;
-    cursor: grab;
-    z-index: 10;
-}
-
-.rope-line {
-    width: 2px;
-    height: 100%;
-    background: #00A19C;
-    margin: 0 auto;
-}
-
-.rope-handle {
-    width: 24px;
-    height: 24px;
-    background: #00A19C;
-    border-radius: 50%;
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #0b0f15;
-    font-size: 10px;
-    box-shadow: 0 0 10px rgba(0, 161, 156, 0.5);
 }
 
 .avatar-wrapper {
